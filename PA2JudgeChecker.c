@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
         }
         else if(checks[i] == -1) {
             if(chords[i] != stackA[topA - 1]) {
-                fprintf(stderr, "PA2JudgeChecker: Found crossing chords (%d, %d) and (%d, %d).\n", stackA[topA], chords[stackA[topA]], chords[i], i);
+                fprintf(stderr, "PA2JudgeChecker: Found crossing chords (%d, %d) and (%d, %d).\n", stackA[topA - 1], chords[stackA[topA - 1]], chords[i], i);
                 exit(1);
             }
             else {
