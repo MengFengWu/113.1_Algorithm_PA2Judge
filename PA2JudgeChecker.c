@@ -19,8 +19,10 @@ int main(int argc, char* argv[]) {
     }
     int mAns;
     fscanf(out, "%d", &mAns);
-    if(answer[argv[3][0] - '0'] != mAns) {
-        fprintf(stderr, "PA2JudgeChecker: Find wrong number of chords(expect: %d, found: %d).\n", answer[argv[3][0] - '0'], mAns);
+    int testCase;
+    sscanf(argv[3], "%d", &testCase);
+    if(answer[testCase] != mAns) {
+        fprintf(stderr, "PA2JudgeChecker: Find wrong number of chords(expect: %d, found: %d).\n", answer[testCase], mAns);
         exit(1);
     }
 
